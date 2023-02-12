@@ -8,9 +8,9 @@
 
 //------------------------------------------------
 
-// for (let list of document.querySelectorAll('li')){
-//     console.log(list.innerText);
-// }
+for (let list of document.querySelectorAll('li')){
+    console.log(list.innerText);
+}
 
 //------------------------------------------------
 
@@ -27,9 +27,9 @@
 
 //------------------------------------------------
 
-// for (let list of document.querySelectorAll('li')){
-//     console.log(list.innerText);
-// }
+for (let list of document.querySelectorAll('li')){
+    console.log(list.innerText);
+}
 
 //------------------------------------------------
 
@@ -39,10 +39,9 @@
 
 //------------------------------------------------
 
-// document.body.children[0].children[0].innerText = '1'
-// document.body.children[0].children[1].innerText = '2'
-// document.body.children[0].children[2].innerText = '3'
-// document.body.children[0].children[3].innerText = '4'
+    for (let i = 0; i < 4; i++){
+        document.body.children[0].children[i].innerText = i + 1
+    }
 
 //------------------------------------------------
 
@@ -52,11 +51,11 @@
 
 //------------------------------------------------
 
-// let newelement = document.createElement('p');
-// newelement.innerText = 'content';
-// newelement.style.fontWeight = '600';
-// newelement.style.fontSize = '36px';
-// document.body.appendChild(newelement);
+let newelement = document.createElement('p');
+newelement.innerText = 'content';
+newelement.style.fontWeight = '600';
+newelement.style.fontSize = '36px';
+document.body.appendChild(newelement);
 
 //------------------------------------------------
 
@@ -67,7 +66,8 @@
 
 //------------------------------------------------
 
-//document.body.children[4].innerText = '14.01.2023'
+let date = new Date();
+document.body.children[4].innerText = date
 
 //------------------------------------------------
 
@@ -77,16 +77,16 @@
 
 //------------------------------------------------
 
-// function makeNewTag(tag, color, content){
-//     let newtag = document.createElement(tag);
-//     newtag.style.color = color;
-//     newtag.innerText = content;
-//     document.body.appendChild(newtag)
-//     return newtag;
-// }
-// console.log(makeNewTag('span', 'red', 'werty'));
-// console.log(makeNewTag('p', '#22237', 'qeqry'));
-// console.log(makeNewTag('h1', 'blue', 'fgg'));
+function makeNewTag(tag, color, content){
+    let newtag = document.createElement(tag);
+    newtag.style.color = color;
+    newtag.innerText = content;
+    document.body.appendChild(newtag)
+    return newtag;
+}
+console.log(makeNewTag('span', 'red', 'werty'));
+console.log(makeNewTag('p', '#22237', 'qeqry'));
+console.log(makeNewTag('h1', 'blue', 'fgg'));
 
 //------------------------------------------------
 
@@ -96,15 +96,15 @@
 
 //------------------------------------------------
 
-// let select = document.querySelector("select");
-// select.style.width = '100px';
+let select = document.querySelector("select");
+select.style.width = '100px';
 
-// for (let i = 1960; i < 2021; i++) {
-//     let option = document.createElement('option');
-//     option.innerText = i;
-//     select.appendChild(option);
+for (let i = 1960; i < 2021; i++) {
+    let option = document.createElement('option');
+    option.innerText = i;
+    select.appendChild(option);
 
-// }
+}
 
 //------------------------------------------------
 
@@ -144,18 +144,18 @@
 
 //------------------------------------------------
 
-// let array = [{name: "Женя", order: true}, {name: "Кристина",order: true}, {name: "Павел", order: false}, {name: "Виолетта",order: false}, {name: "Костя", order: true}];
+let array = [{name: "Женя", order: true}, {name: "Кристина",order: true}, {name: "Павел", order: false}, {name: "Виолетта",order: false}, {name: "Костя", order: true}];
 
-// for (let i = 0; i < array.length; i++) {
-//     let orderOf = array[i].order;
-//     if (orderOf){
-//         orderOf = 'оплатил(a)'
-//     }else {orderOf = 'отменил(a)'}
+for (let i = 0; i < array.length; i++) {
+    let orderOf = array[i].order;
+    if (orderOf){
+        orderOf = 'оплатил(a)'
+    }else {orderOf = 'отменил(a)'}
 
-//     let list = document.createElement('li');
-//     document.body.appendChild(list);
-//     list.innerText = (`Клиент(ка) ${array[i].name}  ${orderOf}  заказ`)
-// }
+    let list = document.createElement('li');
+    document.body.appendChild(list);
+    list.innerText = (`Клиент(ка) ${array[i].name}  ${orderOf}  заказ`)
+}
 
 //------------------------------------------------
 
@@ -175,18 +175,18 @@
 
 //------------------------------------------------
 
-// let linksArr = ['https://www.onliner.by/', 'https://www.youtube.com/', 'https://vk.com/', 'https://www.google.com/', 'https://yandex.ru/'];
+let linksArr = ['https://www.onliner.by/', 'https://www.youtube.com/', 'https://vk.com/', 'https://www.google.com/', 'https://yandex.ru/'];
 
-// let div = document.createElement('div');
-// document.body.appendChild(div);
-// div.style.padding = '100px' 
-// div.style.backgroundColor = "green";
-// for (let i = 0; i < linksArr.length; i++) {   
-//     let a = document.createElement('a');
-//     a.innerText = linksArr[i];
-//     a.setAttribute("href", linksArr[i]);
-//     div.appendChild(a);
-// }
+let div = document.createElement('div');
+document.body.appendChild(div);
+div.style.padding = '100px' 
+div.style.backgroundColor = "green";
+for (let i = 0; i < linksArr.length; i++) {   
+    let a = document.createElement('a');
+    a.innerText = linksArr[i];
+    a.setAttribute("href", linksArr[i]);
+    div.appendChild(a);
+}
 
 //------------------------------------------------
 
@@ -198,10 +198,10 @@
 
 //------------------------------------------------
 
-// let removedElement = document.querySelectorAll(".forRemove");
-// for (let item of removedElement) {
-//     item.remove();
-// }
+let removedElement = document.querySelectorAll(".forRemove");
+for (let item of removedElement) {
+    item.remove();
+}
 
 //------------------------------------------------
 
@@ -223,19 +223,19 @@
 
 // const users = [{name: 'Mark', age: 12}, {name: 'Olga', age: 30}, {name:'Tom', age: 25}, {name:'Den', age: 43}];
 
-// let table = document.querySelector("table");
-// for(i = 0; i < users.length; i++){
-//     let tr = document.createElement('tr');
-//     let td1 = document.createElement('td');
-//     let td2 = document.createElement('td');
-//     td1.innerText = users[i].name;
-//     td2.innerText = users[i].age;
-//     td1.style.backgroundColor = 'red';
-//     td2.style.backgroundColor = 'blue';
-//     tr.append(td1);
-//     tr.append(td2);
-//     table.append(tr);
-// }
+let table = document.querySelector("table");
+for(i = 0; i < users.length; i++){
+    let tr = document.createElement('tr');
+    let td1 = document.createElement('td');
+    let td2 = document.createElement('td');
+    td1.innerText = users[i].name;
+    td2.innerText = users[i].age;
+    td1.style.backgroundColor = 'red';
+    td2.style.backgroundColor = 'blue';
+    tr.append(td1);
+    tr.append(td2);
+    table.append(tr);
+}
 
 //------------------------------------------------
 
